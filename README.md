@@ -13,6 +13,14 @@ are also available through a JSON API.
 
 Run the test suite with `npm test`.
 
+## Deploy to Render
+
+The root `render.yaml` configures a free Node.js web service from the
+`metric-imperial-converter` branch. In the [Render Dashboard](https://dashboard.render.com),
+choose **New > Blueprint**, connect `Vasu-chippa/backend-dev`, select the
+`metric-imperial-converter` branch, and deploy the Blueprint. Render will build
+with `npm ci` and start the service with `npm start`.
+
 ## Conversion API
 
 Send a value and unit to `GET /api/convert?input=4gal`. Numbers may be whole,

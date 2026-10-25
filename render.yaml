@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: metric-imperial-converter
+    runtime: node
+    plan: free
+    branch: metric-imperial-converter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
